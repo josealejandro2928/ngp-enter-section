@@ -10,6 +10,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "ngp-enter-section": [
+        "dist/ngp-enter-section/ngp-enter-section",
+        "dist/ngp-enter-section"
+      ]
+    },
     "target": "es2015",
     "module": "es2020",
     "lib": [

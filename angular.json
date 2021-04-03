@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngp-enter-section": {
+      "projectType": "library",
+      "root": "projects/ngp-enter-section",
+      "sourceRoot": "projects/ngp-enter-section/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngp-enter-section/tsconfig.lib.json",
+            "project": "projects/ngp-enter-section/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngp-enter-section/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngp-enter-section/src/test.ts",
+            "tsConfig": "projects/ngp-enter-section/tsconfig.spec.json",
+            "karmaConfig": "projects/ngp-enter-section/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngp-enter-section/tsconfig.lib.json",
+              "projects/ngp-enter-section/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngp-enter-section"
 }
