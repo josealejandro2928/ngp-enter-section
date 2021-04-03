@@ -26,7 +26,7 @@ export class NgpEnterSectionDirective implements AfterViewInit, OnDestroy {
     this.setInitialAnimation();
 
     const options = {
-      threshold: 0.4,
+      threshold: 0.2,
     };
     this._observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
