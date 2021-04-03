@@ -46,7 +46,7 @@ export class NgpEnterSectionDirective implements AfterViewInit, OnDestroy {
   }
 
   setInitialAnimation() {
-    console.log(this.dirX, this.dirY);
+    // console.log(this.dirX, this.dirY);
     let translateX = '0%';
     let translateY = '0%';
     if (this.dirX == 'left') {
